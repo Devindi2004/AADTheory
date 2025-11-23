@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Hello Welcome to the Sample HTML Page</h1>
+<p>This is a sample HTML document</p>
+<button id="btn-ajax-get">GET</button>
+<button id="btn-ajax-post">POST</button>
+<button id="btn-ajax-put">PUT</button>
+<button id="btn-ajax-delete">DELETE</button>
+
+<script src="jquery-3.7.1.min.js"> </script>
+
+<script>
+
+    $('#btn-ajax-get').click(function (){
+        console.log("start")
+        $.ajax({
+            url:'http://localhost:8080/Day01_war_exploded/customer',
+            method:'GET',
+            // async:false,
+            success:function (response){
+                console.log(response);
+            },
+            error:function (){
+                console.log('error occurred while fetching data');
+            }
+        })
+    })
+    $('#btn-ajax-post').click(function (){
+        console.log("start")
+        $.ajax({
+            url:'http://localhost:8080/Day01_war_exploded/customer',
+            method:'POST',
+            // async:false,
+            success:function (response){
+                console.log(response);
+            },
+            error:function (){
+                console.log('error occurred while fetching data');
+            }
+        })
+    })
+    $('#btn-ajax-put').click(function (){
+        console.log("start")
+        $.ajax({
+            url:'http://localhost:8080/Day01_war_exploded/customer',
+            method:'PUT',
+            // async:false,
+            success:function (response){
+                console.log(response);
+            },
+            error:function (){
+                console.log('error occurred while fetching data');
+            }
+        })
+    })
+    $('#btn-ajax-delete').click(function (){
+        console.log("start")
+        $.ajax({
+            url:'http://localhost:8080/Day01_war_exploded/customer',
+            method:'DELETE',
+            // async:false,
+            success:function (response){
+                console.log(response);
+            },
+            error:function (){
+                console.log('error occurred while fetching data');
+            }
+        })
+    })
+</script>
+</body>
+</html>
