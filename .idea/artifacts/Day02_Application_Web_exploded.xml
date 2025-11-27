@@ -7,7 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Day02-Application" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-j-9.5.0" />
+        </element>
       </element>
+      <element id="javaee-facet-resources" facet="Day02-Application/web/Web2" />
     </root>
   </artifact>
 </component>
