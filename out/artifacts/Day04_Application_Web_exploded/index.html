@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Customer Panel</title>
+    <title>Customer CRUD Panel</title>
 </head>
 <body>
 
-<h1>Customer CRUD</h1>
+<h1>Customer CRUD Operations</h1>
 
+<!-- CREATE / UPDATE FORM -->
 <div>
     <input type="text" id="id" placeholder="Id" />
     <input type="text" id="name" placeholder="Name" />
@@ -30,9 +31,9 @@
 <script src="jquery-3.7.1.min.js"></script>
 <script>
 
-    const baseUrl = "http://localhost:8080/Day04_Application02_Web_exploded/dbcp";
+    const baseUrl = "http://localhost:8080/Day02_Application_Web_exploded/";
 
-
+    // CREATE
     $("#btnCreate").click(function () {
         $.ajax({
             url: baseUrl,
@@ -48,6 +49,7 @@
         });
     });
 
+    // GET ONE
     $("#btnGet").click(function () {
         $.ajax({
             url: baseUrl + "?id=" + $("#id").val(),
@@ -58,6 +60,7 @@
         });
     });
 
+    // GET ALL
     $("#btnGetAll").click(function () {
         $.ajax({
             url: baseUrl,
@@ -68,6 +71,7 @@
         });
     });
 
+    // UPDATE
     $("#btnUpdate").click(function () {
         let id = $("#id").val();
         let name = $("#name").val();
@@ -82,6 +86,7 @@
         });
     });
 
+    // DELETE
     $("#btnDelete").click(function () {
         $.ajax({
             url: baseUrl + "?id=" + $("#id").val(),
